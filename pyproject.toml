@@ -13,6 +13,7 @@ pyodbc = "^4.0.30"
 [tool.poetry.dev-dependencies]
 flake8 = "^3.8.4"
 autopep8 = "^1.5.4"
+coverage = "^5.3"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
