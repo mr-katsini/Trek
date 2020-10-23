@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "trek"
+version = "0.1.0"
+description = ""
+authors = ["Jon Katsini <jon@greeff-katsini.co.za>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+structlog = "^20.1.0"
+colorama = "^0.4.4"
+pyodbc = "^4.0.30"
+
+[tool.poetry.dev-dependencies]
+flake8 = "^3.8.4"
+autopep8 = "^1.5.4"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
