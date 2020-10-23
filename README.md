@@ -2,7 +2,7 @@
 
 _disclaimer - This was a personal project that was intended to solve a requirement for another personal project_
 
-**Trek** is a database versioning tool for database first projects.
+**Trek** is a database versioning tool for database first projects. Write sql and version it _kinda_ safely.
 
 ## Features
 
