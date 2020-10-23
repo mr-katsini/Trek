@@ -1,3 +1,0 @@
-CREATE TABLE TestTable1(
-    Id INT PRIMARY KEY
-)
