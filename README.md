@@ -26,6 +26,50 @@ These are some of the ideas that I'll get to over some time.
   - Determining database objects not defined in the repository
   - Script validation
 
+## Trek Manifest
+Trek uses a manifest file in the database project to manage migrations
+
+```
+    "files": {
+        "tables": [],
+        "triggers": [],
+        "procedures": [],
+        "functions": [],
+        "seeds": [],
+    },
+    "migrations": [
+        {
+            "name": "",
+            "files": {
+                "tables": [],
+                "triggers": [],
+                "procedures": [],
+                "functions": [],
+                "seeds": [],
+            },
+        }
+    ]
+```
+
+| Field                        | Description                                                          |
+| ---------------------------- | -------------------------------------------------------------------- |
+| files                        | This object contains a collection of scripts added in the repository |
+| files.tables                 | Array of table scripts added in the repository                       |
+| files.triggers               | Array of trigger scripts added in the repository                     |
+| files.procedures             | Array of procedure scripts added in the repository                   |
+| files.functions              | Array of function scripts added in the repository                    |
+| files.seeds                  | Array of seed scripts added in the repository                        |
+| migrations                   | Array of migration objects created when running `trek migrate plan`  |
+| migraions[].files            | Object of files used for this migration                              |
+| migraions[].files.tables     | Array of table scripts that will be applied in this migration        |
+| migraions[].files.triggers   | Array of trigger scripts that will be applied in this migration      |
+| migraions[].files.procedures | Array of procedure scripts that will be applied in this migration    |
+| migraions[].files.functions  | Array of function scripts that will be applied in this migration     |
+| migraions[].files.seeds      | Array of seed scripts that will be applied in this migration         |
+
+There is a corresponding table that will get created named `__Migrations` which contains the `DateApplied` and `Name` column. each migration will be inserted into `__Migrations` when applie
+
+
 
 ## How to use it
 
