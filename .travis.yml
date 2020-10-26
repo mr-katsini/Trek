@@ -1,0 +1,15 @@
+language: python
+python:
+    - 3.8
+
+before_install:
+  - pip install poetry
+
+install:
+  - poetry install
+
+script:
+  - poetry run flake8 trek tests
+  - poetry run coverage run --source=trek -m unittest discover -b
+
+before_deploy:
