@@ -4,6 +4,8 @@ python:
 
 before_install:
   - pip install poetry
+  - sudo apt-get update
+  - sudo apt-get install unixodbc unixodbc-dev
 
 install:
   - poetry install
