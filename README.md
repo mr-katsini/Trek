@@ -1,4 +1,6 @@
+
 # Trek
+[![Build Status](https://travis-ci.com/mr-katsini/Trek.svg?branch=main)](https://travis-ci.com/mr-katsini/Trek)
 
 _disclaimer - This was a personal project that was intended to solve a requirement for another personal project_
 
