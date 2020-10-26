@@ -1,9 +1,9 @@
 from os import name
-from database_providers import SqlServerDatabaseProvider
-from file_manager import FileManager
-from logger import logger
-from migration_manager import MigrationManager
-from models import NEW_MIGRATION
+from .database_providers import SqlServerDatabaseProvider
+from .file_manager import FileManager
+from .logger import logger
+from .migration_manager import MigrationManager
+from .models import NEW_MIGRATION
 
 
 class MigrationRunner:

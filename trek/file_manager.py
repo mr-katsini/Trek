@@ -1,7 +1,7 @@
 import os
 import json
-from logger import logger
-from configuration import SUPPORTED_SCRIPTS
+from .logger import logger
+from .configuration import SUPPORTED_SCRIPTS
 
 MANIFEST_FILENAME = "trek.manifest.json"
 

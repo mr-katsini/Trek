@@ -1,7 +1,7 @@
 import argparse
-from migration_manager import MigrationManager
-from configuration import SUPPORTED_SCRIPTS
-from migration_runner import MigrationRunner
+from .migration_manager import MigrationManager
+from .configuration import SUPPORTED_SCRIPTS
+from .migration_runner import MigrationRunner
 from argparse import RawTextHelpFormatter
 
 

@@ -1,6 +1,6 @@
-from file_manager import FileManager
-from models import MIGRATION_MANIFEST
-from logger import logger
+from .file_manager import FileManager
+from .models import MIGRATION_MANIFEST
+from .logger import logger
 import json
 
 
