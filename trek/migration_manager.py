@@ -45,7 +45,13 @@ class MigrationManager:
 
         self.file_manager.write_migration_manifest(manifest)
 
-    def __get_file_name(self, script_action,  script_type, name, description=""):
+    def __get_file_name(
+        self,
+        script_action,
+        script_type,
+        name,
+        description=""
+    ):
 
         # -- get the file index
         index = self.__get_file_index(script_type)
@@ -61,7 +67,13 @@ class MigrationManager:
 
         return filename
 
-    def __create_script(self, name, script_type, script_action, description=""):
+    def __create_script(
+        self,
+        name,
+        script_type,
+        script_action,
+        description=""
+    ):
         self.logger.info(
             "Adding Script", name=name,
             script_type=script_type,

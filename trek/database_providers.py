@@ -1,6 +1,3 @@
-
-
-from types import resolve_bases
 import pyodbc
 
 
@@ -39,9 +36,9 @@ class SqlServerDatabaseProvider(DatabaseProvider):
 
         # TODO: Support different database engines and ensure sql is compatible
         query = """
-        IF  NOT EXISTS (SELECT * FROM sys.objects 
-        WHERE object_id = OBJECT_ID(N'[dbo].[__Migrations]') AND type in (N'U'))
-
+        IF  NOT EXISTS (SELECT * FROM sys.objects
+        WHERE
+        object_id = OBJECT_ID(N'[dbo].[__Migrations]') AND type in (N'U'))
         BEGIN
             CREATE TABLE __Migrations(
                 [Name] VARCHAR(100) PRIMARY KEY,

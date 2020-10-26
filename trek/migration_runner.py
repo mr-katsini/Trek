@@ -1,4 +1,3 @@
-from os import name
 from .database_providers import SqlServerDatabaseProvider
 from .file_manager import FileManager
 from .logger import logger
@@ -10,7 +9,6 @@ class MigrationRunner:
 
     def __init__(self, project_path):
         self.logger = logger
-        # self.logger = self.logger.bind(path=project_path)
         self.file_manager = FileManager(project_path)
         self.migration_manager = MigrationManager(project_path)
         self.manifest = self.migration_manager.manifest
@@ -86,9 +84,10 @@ class MigrationRunner:
                             applied_scipts[k] = f
 
                     self.database_provider.apply_migration(m['name'])
-                except:
+                except Exception as ex:
                     self.logger.error("Migration failed to apply.. ")
                     self.logger.info("Rolling back")
+                    self.logger.error(ex)
 
                     # if the migration fails midway, roll back the migration
                     for k, v in applied_scipts.items():
@@ -98,5 +97,4 @@ class MigrationRunner:
                             rollback_file, k)
                         self.database_provider.apply_migration_script(text)
 
-        self.logger.info(
-            "Migrations have been run and your database is up to date! Hooray!")
+        self.logger.info("Migrations have been applied")

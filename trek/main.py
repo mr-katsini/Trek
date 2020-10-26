@@ -53,12 +53,12 @@ def get_command_line_args():
         """
     )
 
-    init_parser = sub_parsers.add_parser(
+    sub_parsers.add_parser(
         "init",
         help="Setup a new database project"
     )
 
-    setup_parser = sub_parsers.add_parser("setup")
+    sub_parsers.add_parser("setup")
 
     parsers = [
         create_parser,
